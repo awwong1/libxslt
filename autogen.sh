@@ -16,7 +16,7 @@ DIE=0
 	DIE=1
 }
 
-(libtoolize --version) < /dev/null > /dev/null 2>&1 || {
+(glibtoolize --version) < /dev/null > /dev/null 2>&1 || {
 	echo
 	echo "You must have libtool installed to compile libxslt."
 	echo "Download the appropriate package for your distribution,"
@@ -46,8 +46,8 @@ if test -z "$NOCONFIGURE" -a -z "$*"; then
 	echo "to pass any to it, please specify them on the $0 command line."
 fi
 
-echo "Running libtoolize..."
-libtoolize --copy --force
+echo "Running glibtoolize..."
+glibtoolize --copy --force
 echo "Running aclocal..."
 aclocal $ACLOCAL_FLAGS
 echo "Running automake..."
